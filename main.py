@@ -7,6 +7,8 @@ current_page = 1
 proceed = True
 # collect data while proceed is true
 while(proceed):
+  print("Currently scraping page: "+str(current_page))
+
   url = "https://books.toscrape.com/catalogue/page-"+str(current_page)+".html"
 
   page = requests.get(url)
@@ -28,7 +30,6 @@ while(proceed):
 
       item['Stock'] = book.find("p", class_="instock availability").text.strip()
 
-      print(item['Stock'])
+      data.append(item)
 
   current_page += 1
-  proceed = False

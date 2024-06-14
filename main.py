@@ -36,3 +36,5 @@ while(proceed):
       data.append(item)
 
   current_page += 1
+df = pd.DataFrame(data)
+df.to_excel("books.xlsx")

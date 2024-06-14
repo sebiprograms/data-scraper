@@ -5,6 +5,9 @@ import pandas as pd
 current_page = 1
 
 proceed = True
+
+data = []
+
 # collect data while proceed is true
 while(proceed):
   print("Currently scraping page: "+str(current_page))
